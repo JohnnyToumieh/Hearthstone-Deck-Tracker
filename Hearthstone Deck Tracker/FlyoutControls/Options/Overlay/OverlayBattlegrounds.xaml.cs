@@ -27,7 +27,7 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Overlay
 		{
 			CheckboxShowBattlegroundsTiers.IsChecked = Config.Instance.ShowBattlegroundsTiers;
 			CheckboxShowBattlegroundsTurnCounter.IsChecked = Config.Instance.ShowBattlegroundsTurnCounter;
-			CheckboxShowBattlegroundsBannedType.IsChecked = Config.Instance.ShowBattlegroundsBannedType;
+			CheckboxShowBattlegroundsBannedTribe.IsChecked = Config.Instance.ShowBattlegroundsBannedTribe;
 
 			CheckboxRunCombatSimulations.IsChecked = Config.Instance.RunBobsBuddy;
 
@@ -108,24 +108,24 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Overlay
 				Core.Overlay.TurnCounter.Visibility = Visibility.Collapsed;
 		}
 
-		private void CheckboxShowBattlegroundsBannedType_Checked(object sender, RoutedEventArgs e)
+		private void CheckboxShowBattlegroundsBannedTribe_Checked(object sender, RoutedEventArgs e)
 		{
 			if(!_initialized)
 				return;
-			Config.Instance.ShowBattlegroundsBannedType = true;
+			Config.Instance.ShowBattlegroundsBannedTribe = true;
 			SaveConfig(true);
 			if(Core.Game.IsBattlegroundsMatch)
-				Core.Overlay.BannedType.Visibility = Visibility.Visible;
+				Core.Overlay.BannedTribe.Visibility = Visibility.Visible;
 		}
 
-		private void CheckboxShowBattlegroundsBannedType_Unchecked(object sender, RoutedEventArgs e)
+		private void CheckboxShowBattlegroundsBannedTribe_Unchecked(object sender, RoutedEventArgs e)
 		{
 			if(!_initialized)
 				return;
-			Config.Instance.ShowBattlegroundsBannedType = false;
+			Config.Instance.ShowBattlegroundsBannedTribe = false;
 			SaveConfig(true);
 			if(Core.Game.IsBattlegroundsMatch)
-				Core.Overlay.BannedType.Visibility = Visibility.Collapsed;
+				Core.Overlay.BannedTribe.Visibility = Visibility.Collapsed;
 		}
 
 		private void CheckboxRunCombatSimulations_Checked(object sender, RoutedEventArgs e)

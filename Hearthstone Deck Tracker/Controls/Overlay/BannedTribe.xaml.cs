@@ -3,16 +3,16 @@ using System.Windows.Controls;
 
 namespace Hearthstone_Deck_Tracker.Controls.Overlay
 {
-    public partial class BannedType : UserControl
+    public partial class BannedTribe : UserControl
 	{
-        public BannedType()
+        public BannedTribe()
         {
             InitializeComponent();
         }
 
-		internal void UpdateType(string bannedType)
+		internal void UpdateTribe(string bannedTribe)
 		{
-			BannedText.Text = string.Format("Banned: {0}", bannedType);
+			BannedTribeText.Text = string.Format("Banned: {0}", bannedTribe);
 		}
 	}
 }

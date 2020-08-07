@@ -278,9 +278,9 @@ namespace Hearthstone_Deck_Tracker.Windows
 			ShowBobsBuddyPanel();
 		}
 
-		internal void ShowBgsTopBarBannedType()
+		internal void ShowBgsTopBarBannedTribe()
 		{
-			BannedType.Visibility = Config.Instance.ShowBattlegroundsBannedType ? Visible : Collapsed;
+			BannedTribe.Visibility = Config.Instance.ShowBattlegroundsBannedTribe ? Visible : Collapsed;
 			TurnCounter.Visibility = Collapsed;
 			BattlegroundsMinionsPanel.Visibility = Collapsed;
 
@@ -292,7 +292,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			BattlegroundsMinionsPanel.Reset();
 			_bgsTopBarBehavior.Hide();
 			TurnCounter.UpdateTurn(1);
-			BannedType.UpdateType("N/A");
+			BannedTribe.UpdateTribe("N/A");
 			HideBobsBuddyPanel();
 		}
 

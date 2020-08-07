@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Hearthstone_Deck_Tracker.Controls.Overlay.BannedType"
+﻿<UserControl x:Class="Hearthstone_Deck_Tracker.Controls.Overlay.BannedTribe"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,6 +6,6 @@
              xmlns:local="clr-namespace:Hearthstone_Deck_Tracker"
              mc:Ignorable="d">
     <Border BorderBrush="#141617" BorderThickness="1" Background="#23272a" >
-        <local:HearthstoneTextBlock x:Name="BannedText" Text="Banned: N/A" Margin="10,3" />
+        <local:HearthstoneTextBlock x:Name="BannedTribeText" Text="Banned: N/A" Margin="10,3" />
     </Border>
 </UserControl>

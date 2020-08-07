@@ -19,10 +19,10 @@
                   HorizontalAlignment="Left"
                   VerticalAlignment="Top" Checked="CheckboxShowBattlegroundsTurnCounter_Checked"
                   Unchecked="CheckboxShowBattlegroundsTurnCounter_Unchecked" Margin="10,5,0,0" />
-        <CheckBox x:Name="CheckboxShowBattlegroundsBannedType" Content="Show Battlegrounds Banned Type"
+        <CheckBox x:Name="CheckboxShowBattlegroundsBannedTribe" Content="Show Battlegrounds Banned Tribe"
                   HorizontalAlignment="Left"
-                  VerticalAlignment="Top" Checked="CheckboxShowBattlegroundsBannedType_Checked"
-                  Unchecked="CheckboxShowBattlegroundsBannedType_Unchecked" Margin="10,5,0,0" />
+                  VerticalAlignment="Top" Checked="CheckboxShowBattlegroundsBannedTribe_Checked"
+                  Unchecked="CheckboxShowBattlegroundsBannedTribe_Unchecked" Margin="10,5,0,0" />
         <GroupBox Header="{lex:LocTextUpper Options_Overlay_Battlegrounds_Label_BobsBuddy}" Margin="5,10,5,5">
             <StackPanel>
                 <TextBlock Name="TextBobsBuddyDisabled" Foreground="Yellow" Visibility="Collapsed" Margin="0,0,0,5"/>
