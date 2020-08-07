@@ -24,6 +24,46 @@ namespace Hearthstone_Deck_Tracker.Hearthstone
 			return races;
 		}
 
+		public static string GetMissingRaceString(Guid? gameId)
+		{
+			var races = GetAvailableRaces(gameId);
+			var total = 113;
+
+			foreach (var race in races)
+			{
+				total -= (int) race;
+			}
+
+			if (total == 14)
+			{
+				return "Murlocs";
+			}
+			else if (total == 15)
+			{
+				return "Demons";
+			}
+			else if (total == 17)
+			{
+				return "Mechs";
+			}
+			else if (total == 20)
+			{
+				return "Beasts";
+			}
+			else if (total == 23)
+			{
+				return "Pirates";
+			}
+			else if (total == 24)
+			{
+				return "Dragons";
+			}
+			else
+			{
+				return "N/A";
+			}
+		}
+
 		private static HashSet<Race> AvailableRaces
 		{
 			get
