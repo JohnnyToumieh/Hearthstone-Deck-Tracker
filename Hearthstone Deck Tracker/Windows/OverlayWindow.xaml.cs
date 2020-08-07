@@ -58,7 +58,6 @@ namespace Hearthstone_Deck_Tracker.Windows
 
 		private OverlayElementBehavior _heroNotificationBehavior;
 		private OverlayElementBehavior _bgsTopBarBehavior;
-		private OverlayElementBehavior _bgsTopBarBannedTypeBehavior;
 		private OverlayElementBehavior _bgsBobsBuddyBehavior;
 
 		public OverlayWindow(GameV2 game)
@@ -82,16 +81,6 @@ namespace Hearthstone_Deck_Tracker.Windows
 			_bgsTopBarBehavior = new OverlayElementBehavior(BgsTopBar)
 			{
 				GetRight = () => 0,
-				GetTop = () => 0,
-				GetScaling = () => AutoScaling,
-				AnchorSide = Side.Top,
-				EntranceAnimation = AnimationType.Slide,
-				ExitAnimation = AnimationType.Slide,
-			};
-
-			_bgsTopBarBannedTypeBehavior = new OverlayElementBehavior(BgsTopBarBannedType)
-			{
-				GetRight = () => 410,
 				GetTop = () => 0,
 				GetScaling = () => AutoScaling,
 				AnchorSide = Side.Top,
@@ -281,26 +270,21 @@ namespace Hearthstone_Deck_Tracker.Windows
 			_heroNotificationBehavior.Hide();
 		}
 
-		internal void ShowBgsTopBarBannedType()
-		{
-			BannedType.Visibility = Config.Instance.ShowBattlegroundsBannedType ? Visible : Collapsed;
-
-			_bgsTopBarBannedTypeBehavior.Show();
-		}
-
-		internal void HideBgsTopBarBannedType()
-		{
-			_bgsTopBarBannedTypeBehavior.Hide();
-			BannedType.UpdateType("N/A");
-		}
-
 		internal void ShowBgsTopBar()
 		{
 			TurnCounter.Visibility = Config.Instance.ShowBattlegroundsTurnCounter ? Visible : Collapsed;
 			BattlegroundsMinionsPanel.Visibility = Config.Instance.ShowBattlegroundsTiers ? Visible : Collapsed;
 
-			_bgsTopBarBehavior.Show();
 			ShowBobsBuddyPanel();
+		}
+
+		internal void ShowBgsTopBarBannedType()
+		{
+			BannedType.Visibility = Config.Instance.ShowBattlegroundsBannedType ? Visible : Collapsed;
+			TurnCounter.Visibility = Collapsed;
+			BattlegroundsMinionsPanel.Visibility = Collapsed;
+
+			_bgsTopBarBehavior.Show();
 		}
 
 		internal void HideBgsTopBar()
@@ -308,9 +292,8 @@ namespace Hearthstone_Deck_Tracker.Windows
 			BattlegroundsMinionsPanel.Reset();
 			_bgsTopBarBehavior.Hide();
 			TurnCounter.UpdateTurn(1);
+			BannedType.UpdateType("N/A");
 			HideBobsBuddyPanel();
-
-			HideBgsTopBarBannedType();
 		}
 
 		internal void ShowBobsBuddyPanel()
