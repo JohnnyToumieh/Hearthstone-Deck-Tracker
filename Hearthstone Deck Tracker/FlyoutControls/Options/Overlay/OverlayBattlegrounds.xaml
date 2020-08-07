@@ -19,7 +19,7 @@
                   HorizontalAlignment="Left"
                   VerticalAlignment="Top" Checked="CheckboxShowBattlegroundsTurnCounter_Checked"
                   Unchecked="CheckboxShowBattlegroundsTurnCounter_Unchecked" Margin="10,5,0,0" />
-        <CheckBox x:Name="CheckboxShowBattlegroundsBannedType" Content="{lex:Loc Options_Overlay_General_CheckBox_BattlegroundsBannedType}"
+        <CheckBox x:Name="CheckboxShowBattlegroundsBannedType" Content="Show Battlegrounds Banned Type"
                   HorizontalAlignment="Left"
                   VerticalAlignment="Top" Checked="CheckboxShowBattlegroundsBannedType_Checked"
                   Unchecked="CheckboxShowBattlegroundsBannedType_Unchecked" Margin="10,5,0,0" />
