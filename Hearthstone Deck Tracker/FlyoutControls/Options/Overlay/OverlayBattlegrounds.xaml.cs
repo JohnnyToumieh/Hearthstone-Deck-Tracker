@@ -125,7 +125,7 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Overlay
 			Config.Instance.ShowBattlegroundsBannedType = false;
 			SaveConfig(true);
 			if(Core.Game.IsBattlegroundsMatch)
-				Core.Overlay.TurnCounter.Visibility = Visibility.Collapsed;
+				Core.Overlay.BannedType.Visibility = Visibility.Collapsed;
 		}
 
 		private void CheckboxRunCombatSimulations_Checked(object sender, RoutedEventArgs e)
