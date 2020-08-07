@@ -112,14 +112,14 @@
                         </StackPanel>
                         <StackPanel Style="{StaticResource ContainerStyle}">
                             <Border Style="{StaticResource LabelContainerStyle}" >
-                                <TextBlock Text="{lex:LocTextUpper Avg Damage}" Style="{StaticResource DamageLabelTextStyle}" Foreground="#FFFFFF" />
+                                <TextBlock Text="Avg Damage" Style="{StaticResource DamageLabelTextStyle}" Foreground="#FFFFFF" />
                             </Border>
                             <local:HearthstoneTextBlock Text="{Binding AverageDamageDisplay}" FontSize="17" Opacity="0.85"
                                 VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="{Binding PercentagesVisibility}" />
                         </StackPanel>
                         <StackPanel Style="{StaticResource ContainerStyle}">
                             <Border Style="{StaticResource LabelContainerStyle}" >
-                                <TextBlock Text="{lex:LocTextUpper Med Damage}" Style="{StaticResource DamageLabelTextStyle}" Foreground="#FFFFFF" />
+                                <TextBlock Text="Med Damage" Style="{StaticResource DamageLabelTextStyle}" Foreground="#FFFFFF" />
                             </Border>
                             <local:HearthstoneTextBlock Text="{Binding MedianDamageDisplay}" FontSize="17" Opacity="0.85"
                                 VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="{Binding PercentagesVisibility}" />
