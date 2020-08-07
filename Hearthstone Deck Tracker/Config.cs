@@ -790,6 +790,9 @@ namespace Hearthstone_Deck_Tracker
 		public bool ShowBattlegroundsTurnCounter = true;
 
 		[DefaultValue(true)]
+		public bool ShowBattlegroundsBannedType = true;
+
+		[DefaultValue(true)]
 		public bool RunBobsBuddy = true;
 
 		[DefaultValue(true)]

@@ -273,6 +273,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 		internal void ShowBgsTopBar()
 		{
 			TurnCounter.Visibility = Config.Instance.ShowBattlegroundsTurnCounter ? Visible : Collapsed;
+			BannedType.Visibility = Config.Instance.ShowBattlegroundsBannedType ? Visible : Collapsed;
 			BattlegroundsMinionsPanel.Visibility = Config.Instance.ShowBattlegroundsTiers ? Visible : Collapsed;
 
 			_bgsTopBarBehavior.Show();
@@ -284,6 +285,7 @@ namespace Hearthstone_Deck_Tracker.Windows
 			BattlegroundsMinionsPanel.Reset();
 			_bgsTopBarBehavior.Hide();
 			TurnCounter.UpdateTurn(1);
+			BannedType.UpdateType("N/A");
 			HideBobsBuddyPanel();
 		}
 

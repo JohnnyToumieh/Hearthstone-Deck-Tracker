@@ -72,6 +72,28 @@ namespace Hearthstone_Deck_Tracker.Controls.Overlay
 			}
 		}
 
+		private string _averageDamageDisplay;
+		public string AverageDamageDisplay
+		{
+			get => _averageDamageDisplay;
+			set
+			{
+				_averageDamageDisplay = value;
+				OnPropertyChanged();
+			}
+		}
+
+		private string _medianDamageDisplay;
+		public string MedianDamageDisplay
+		{
+			get => _medianDamageDisplay;
+			set
+			{
+				_medianDamageDisplay = value;
+				OnPropertyChanged();
+			}
+		}
+
 		private BobsBuddyState _state;
 		public BobsBuddyState State
 		{
@@ -173,7 +195,7 @@ namespace Hearthstone_Deck_Tracker.Controls.Overlay
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		internal void ShowCompletedSimulation(double winRate, double tieRate, double lossRate, double playerLethal, double opponentLethal)
+		internal void ShowCompletedSimulation(double winRate, double tieRate, double lossRate, double playerLethal, double opponentLethal, double averageDamage, double medianDamage)
 		{
 			ShowPercentagesHideSpinners();
 
@@ -182,6 +204,8 @@ namespace Hearthstone_Deck_Tracker.Controls.Overlay
 			LossRateDisplay = string.Format("{0:0.#%}", lossRate);
 			PlayerLethalDisplay = string.Format("{0:0.#%}", playerLethal);
 			OpponentLethalDisplay = string.Format("{0:0.#%}", opponentLethal);
+			AverageDamageDisplay = string.Format("{0:0.##}", averageDamage);
+			MedianDamageDisplay = string.Format("{0:0.##}", medianDamage);
 
 			PlayerLethalOpacity = playerLethal > 0 ? 1 : 0.3;
 			OpponentLethalOpacity = opponentLethal > 0 ? 1 : 0.3;

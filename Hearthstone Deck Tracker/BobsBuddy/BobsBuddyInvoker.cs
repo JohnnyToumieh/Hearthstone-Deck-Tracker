@@ -209,7 +209,9 @@ namespace Hearthstone_Deck_Tracker.BobsBuddy
 						result.tieRate,
 						result.lossRate,
 						result.theirDeathRate,
-						result.myDeathRate
+						result.myDeathRate,
+						result.avDamage,
+						result.medianDamage
 					);
 				}
 			}

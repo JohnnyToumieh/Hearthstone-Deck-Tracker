@@ -27,6 +27,7 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Overlay
 		{
 			CheckboxShowBattlegroundsTiers.IsChecked = Config.Instance.ShowBattlegroundsTiers;
 			CheckboxShowBattlegroundsTurnCounter.IsChecked = Config.Instance.ShowBattlegroundsTurnCounter;
+			CheckboxShowBattlegroundsBannedType.IsChecked = Config.Instance.ShowBattlegroundsBannedType;
 
 			CheckboxRunCombatSimulations.IsChecked = Config.Instance.RunBobsBuddy;
 
@@ -102,6 +103,26 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Overlay
 			if(!_initialized)
 				return;
 			Config.Instance.ShowBattlegroundsTurnCounter = false;
+			SaveConfig(true);
+			if(Core.Game.IsBattlegroundsMatch)
+				Core.Overlay.TurnCounter.Visibility = Visibility.Collapsed;
+		}
+
+		private void CheckboxShowBattlegroundsBannedType_Checked(object sender, RoutedEventArgs e)
+		{
+			if(!_initialized)
+				return;
+			Config.Instance.ShowBattlegroundsBannedType = true;
+			SaveConfig(true);
+			if(Core.Game.IsBattlegroundsMatch)
+				Core.Overlay.BannedType.Visibility = Visibility.Visible;
+		}
+
+		private void CheckboxShowBattlegroundsBannedType_Unchecked(object sender, RoutedEventArgs e)
+		{
+			if(!_initialized)
+				return;
+			Config.Instance.ShowBattlegroundsBannedType = false;
 			SaveConfig(true);
 			if(Core.Game.IsBattlegroundsMatch)
 				Core.Overlay.TurnCounter.Visibility = Visibility.Collapsed;

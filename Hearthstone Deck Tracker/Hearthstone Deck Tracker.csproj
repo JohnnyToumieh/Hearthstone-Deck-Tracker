@@ -286,6 +286,9 @@
     <Compile Include="Controls\Overlay\TurnCounter.xaml.cs">
       <DependentUpon>TurnCounter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Overlay\BannedType.xaml.cs">
+      <DependentUpon>BannedType.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\RemovableBanner.xaml.cs">
       <DependentUpon>RemovableBanner.xaml</DependentUpon>
     </Compile>
@@ -1028,6 +1031,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\Overlay\TurnCounter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Overlay\BannedType.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -25,6 +25,10 @@
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
+        <Style x:Key="DamageLabelTextStyle" TargetType="TextBlock" BasedOn="{StaticResource LabelTextStyle}">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
         <Style x:Key="ContainerStyle" TargetType="StackPanel">
             <Setter Property="MinWidth" Value="60"/>
             <Setter Property="Margin" Value="5"/>
@@ -104,6 +108,20 @@
                                 <TextBlock Text="{lex:LocTextUpper BobsBuddyPanel_Label_Lethal}" Style="{StaticResource LethalLabelTextStyle}" Foreground="#C66E6E" />
                             </Border>
                             <local:HearthstoneTextBlock Text="{Binding OpponentLethalDisplay}" FontSize="17" Opacity="0.85"
+                                VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="{Binding PercentagesVisibility}" />
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource ContainerStyle}">
+                            <Border Style="{StaticResource LabelContainerStyle}" >
+                                <TextBlock Text="{lex:LocTextUpper Avg Damage}" Style="{StaticResource DamageLabelTextStyle}" Foreground="#FFFFFF" />
+                            </Border>
+                            <local:HearthstoneTextBlock Text="{Binding AverageDamageDisplay}" FontSize="17" Opacity="0.85"
+                                VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="{Binding PercentagesVisibility}" />
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource ContainerStyle}">
+                            <Border Style="{StaticResource LabelContainerStyle}" >
+                                <TextBlock Text="{lex:LocTextUpper Med Damage}" Style="{StaticResource DamageLabelTextStyle}" Foreground="#FFFFFF" />
+                            </Border>
+                            <local:HearthstoneTextBlock Text="{Binding MedianDamageDisplay}" FontSize="17" Opacity="0.85"
                                 VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="{Binding PercentagesVisibility}" />
                         </StackPanel>
                     </StackPanel>

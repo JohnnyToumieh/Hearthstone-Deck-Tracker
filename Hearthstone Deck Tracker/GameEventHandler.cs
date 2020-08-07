@@ -811,6 +811,8 @@ namespace Hearthstone_Deck_Tracker
 
 				if(_game.CurrentGameStats != null)
 					_game.CurrentGameStats.BattlegroundsRaces = BattlegroundsUtils.GetAvailableRaces(_game.CurrentGameStats.GameId);
+
+				Core.Overlay.BannedType.UpdateType("Hello");
 			}
 		}
 
