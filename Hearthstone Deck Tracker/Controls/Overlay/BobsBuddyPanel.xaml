@@ -110,14 +110,14 @@
                             <local:HearthstoneTextBlock Text="{Binding OpponentLethalDisplay}" FontSize="17" Opacity="0.85"
                                 VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="{Binding PercentagesVisibility}" />
                         </StackPanel>
-                        <StackPanel Style="{StaticResource ContainerStyle}">
+                        <StackPanel x:Name="AverageDamageLabel" Style="{StaticResource ContainerStyle}">
                             <Border Style="{StaticResource LabelContainerStyle}" >
                                 <TextBlock Text="AVG DMG" Style="{StaticResource DamageLabelTextStyle}" Foreground="#FFFFFF" />
                             </Border>
                             <local:HearthstoneTextBlock Text="{Binding AverageDamageDisplay}" FontSize="17" Opacity="0.85"
                                 VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="{Binding PercentagesVisibility}" />
                         </StackPanel>
-                        <StackPanel Style="{StaticResource ContainerStyle}">
+                        <StackPanel x:Name="MedianDamageLabel" Style="{StaticResource ContainerStyle}">
                             <Border Style="{StaticResource LabelContainerStyle}" >
                                 <TextBlock Text="MED DMG" Style="{StaticResource DamageLabelTextStyle}" Foreground="#FFFFFF" />
                             </Border>

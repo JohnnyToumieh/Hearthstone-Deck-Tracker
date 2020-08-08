@@ -38,6 +38,14 @@
                           HorizontalAlignment="Left"
                           VerticalAlignment="Top" Checked="CheckboxShowResultsDuringShopping_Checked"
                           Unchecked="CheckboxShowResultsDuringShopping_Unchecked" Margin="0,5,0,0" />
+                <CheckBox x:Name="CheckboxShowBobsBuddyAverageDamage" Content="Show Average Damage"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Top" Checked="CheckboxShowBobsBuddyAverageDamage_Checked"
+                          Unchecked="CheckboxShowBobsBuddyAverageDamage_Unchecked" Margin="0,5,0,0" />
+                <CheckBox x:Name="CheckboxShowBobsBuddyMedianDamage" Content="Show Median Damage"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Top" Checked="CheckboxShowBobsBuddyMedianDamage_Checked"
+                          Unchecked="CheckboxShowBobsBuddyMedianDamage_Unchecked" Margin="0,5,0,0" />
             </StackPanel>
         </GroupBox>
         <Button x:Name="OverlayHelpButton"

@@ -30,6 +30,8 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Overlay
 			CheckboxShowBattlegroundsBannedTribe.IsChecked = Config.Instance.ShowBattlegroundsBannedTribe;
 
 			CheckboxRunCombatSimulations.IsChecked = Config.Instance.RunBobsBuddy;
+			CheckboxShowBobsBuddyAverageDamage.IsChecked = Config.Instance.ShowBobsBuddyAverageDamage;
+			CheckboxShowBobsBuddyMedianDamage.IsChecked = Config.Instance.ShowBobsBuddyMedianDamage;
 
 			CheckboxShowResultsDuringCombat.IsChecked = Config.Instance.ShowBobsBuddyDuringCombat;
 			CheckboxShowResultsDuringCombat.IsEnabled = Config.Instance.RunBobsBuddy;
@@ -152,6 +154,46 @@ namespace Hearthstone_Deck_Tracker.FlyoutControls.Options.Overlay
 			if(Core.Game.IsBattlegroundsMatch)
 				Core.Overlay.HideBobsBuddyPanel();
 			Influx.OnBobsBuddyEnabledChanged(false);
+		}
+
+		private void CheckboxShowBobsBuddyAverageDamage_Checked(object sender, RoutedEventArgs e)
+		{
+			if(!_initialized)
+				return;
+			Config.Instance.ShowBobsBuddyAverageDamage = true;
+			SaveConfig(true);
+			if(Core.Game.IsBattlegroundsMatch)
+				Core.Overlay.BobsBuddyDisplay.AverageDamageLabel.Visibility = Visibility.Visible;
+		}
+
+		private void CheckboxShowBobsBuddyAverageDamage_Unchecked(object sender, RoutedEventArgs e)
+		{
+			if(!_initialized)
+				return;
+			Config.Instance.ShowBobsBuddyAverageDamage = false;
+			SaveConfig(true);
+			if(Core.Game.IsBattlegroundsMatch)
+				Core.Overlay.BobsBuddyDisplay.AverageDamageLabel.Visibility = Visibility.Collapsed;
+		}
+
+		private void CheckboxShowBobsBuddyMedianDamage_Checked(object sender, RoutedEventArgs e)
+		{
+			if(!_initialized)
+				return;
+			Config.Instance.ShowBobsBuddyMedianDamage = true;
+			SaveConfig(true);
+			if(Core.Game.IsBattlegroundsMatch)
+				Core.Overlay.BobsBuddyDisplay.MedianDamageLabel.Visibility = Visibility.Visible;
+		}
+
+		private void CheckboxShowBobsBuddyMedianDamage_Unchecked(object sender, RoutedEventArgs e)
+		{
+			if(!_initialized)
+				return;
+			Config.Instance.ShowBobsBuddyMedianDamage = false;
+			SaveConfig(true);
+			if(Core.Game.IsBattlegroundsMatch)
+				Core.Overlay.BobsBuddyDisplay.MedianDamageLabel.Visibility = Visibility.Collapsed;
 		}
 
 		private void CheckboxShowResultsDuringCombat_Checked(object sender, RoutedEventArgs e)

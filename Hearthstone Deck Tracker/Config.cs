@@ -796,6 +796,12 @@ namespace Hearthstone_Deck_Tracker
 		public bool RunBobsBuddy = true;
 
 		[DefaultValue(true)]
+		public bool ShowBobsBuddyAverageDamage = true;
+
+		[DefaultValue(true)]
+		public bool ShowBobsBuddyMedianDamage = true;
+
+		[DefaultValue(true)]
 		public bool ShowBobsBuddyDuringCombat = true;
 
 		[DefaultValue(false)]
