@@ -1,3 +1,19 @@
+## **Release v1.13.4 - 2020-09-03**
+
+**Bob's Buddy**
+- Added additional instrumentation to track down Lich King prediction inaccuracies.
+
+
+## **Release v1.13.3 - 2020-09-01**
+
+**Fixes**:
+- Fixed an issue where additional secrets could be greyed out when the opponent had multiple secrets in play and Counterspell was triggered.
+- Fixed an issue where Aranna Starseeker's last board was not tracked between transforming to Aranna, Unleashed.
+
+**Bob's Buddy**
+- Fixed an issue where activations of Lich King's hero power would occasionally be missed.
+
+
 ## **Release v1.13.2 - 2020-08-18**
 **Updated for Hearthstone 18.0.2.56359**
 

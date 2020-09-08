@@ -62,6 +62,11 @@ namespace HDTTests.Hearthstone.Secrets
 			throw new NotImplementedException();
 		}
 
+		public BoardSnapshot GetBattlegroundsBoardStateFor(string cardId)
+		{
+			throw new NotImplementedException();
+		}
+
 		public int GetTurnNumber()
 		{
 			throw new NotImplementedException();
@@ -79,5 +84,7 @@ namespace HDTTests.Hearthstone.Secrets
 		public bool? IsDungeonMatch { get; set; }
 		public bool PlayerChallengeable { get; }
 		public bool SetupDone { get; set; }
+
+		public int OpponentSecretCount { get; set; }
 	}
 }
